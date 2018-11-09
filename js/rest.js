@@ -1,3 +1,5 @@
+var auth;
+
 function getIP(){
 
 	var xhr = new XMLHttpRequest();
@@ -13,11 +15,21 @@ function getIP(){
 	}		
 }
 
+function askAuth() {
+	auth = prompt("App:", "");
+	if(auth="final"){
+		auth="a051a5720103492da3dcd21638751318";
+	}else{
+		if(auth="test")
+		auth="b8f38de1f8f64b76b4a3dd0643924358";
+	}
+}
+
 //Send POST request
 
 function sendData(pin,value){
 
-	var auth = "a051a5720103492da3dcd21638751318";
+	//auth = "a051a5720103492da3dcd21638751318";
 	//var auth = "b8f38de1f8f64b76b4a3dd0643924358";
 	var url = "https://private-anon-7d28ed15b9-blynkapi.apiary-proxy.com/"+auth+"/update/"+pin+"?"+"value"+"="+value;
 	//console.log(url);

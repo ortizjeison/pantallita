@@ -1,10 +1,21 @@
-.green{
-    background-color: #067c06;
+.greendark{
+    background-color: #7c9f31;
 }
 
+.green{
+    background-color: #87ad34;
+}
+
+#table td:hover { 
+    background-color: #00000070;
+ }
+
 tr {
-    line-height: 100px;
-    min-height: 100px;
-    height: 100px;
+    line-height: 6rem;
+    min-height: 6rem;
+    height: 6rem;
  }
  
+ .table-bordered td, .table-bordered th {
+    border: 2px solid #87ad34;
+}
