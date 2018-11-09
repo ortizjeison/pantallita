@@ -17,10 +17,10 @@ function getIP(){
 
 function askAuth() {
 	auth = prompt("App:", "");
-	if(auth="final"){
+	if(auth=="final"){
 		auth="a051a5720103492da3dcd21638751318";
 	}else{
-		if(auth="test")
+		if(auth=="test")
 		auth="b8f38de1f8f64b76b4a3dd0643924358";
 	}
 }
