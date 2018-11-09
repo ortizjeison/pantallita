@@ -10,13 +10,25 @@
     background-color: #00000070;
  }
 
+@media (min-width: 978px) {
 
 tr {
     line-height: 8rem;
     min-height: 8rem;
     height: 8rem;
  }
-    
+}
+
+@media (max-width: 978px) {
+
+tr {
+    line-height: 6rem;
+    min-height: 6rem;
+    height: 6rem;
+ }
+}
+
+
 
  
  .table-bordered td, .table-bordered th {
