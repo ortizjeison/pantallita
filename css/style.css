@@ -24,6 +24,8 @@ tr {
     color: white;
 }
 
-.nopadding{
-    padding: 0%;
+@media (max-width: 480px) {
+    .nopadding{
+        padding: 0%;
+    }
 }
