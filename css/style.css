@@ -23,3 +23,7 @@ tr {
 .whitefont{
     color: white;
 }
+
+.nopadding{
+    padding: 0%;
+}
