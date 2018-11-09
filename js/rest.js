@@ -65,10 +65,3 @@ function mousePosition(){
 
 	document.addEventListener('mousemove', throttle(handleMousemove, 500));
 }
-
-function size(){
-	var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-	var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-	console.log(w);
-	console.log(h);
-}
