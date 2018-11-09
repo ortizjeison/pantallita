@@ -11,9 +11,9 @@
  }
 
 tr {
-    line-height: 6rem;
-    min-height: 6rem;
-    height: 6rem;
+    line-height: 4rem;
+    min-height: 4rem;
+    height: 4rem;
  }
  
  .table-bordered td, .table-bordered th {
