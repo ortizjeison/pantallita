@@ -19,3 +19,7 @@ tr {
  .table-bordered td, .table-bordered th {
     border: 2px solid #87ad34;
 }
+
+.whitefont{
+    color: white;
+}
