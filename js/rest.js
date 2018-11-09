@@ -44,7 +44,8 @@ function sendData(pin,value){
 		}
 	};
 	  
-	  request.send();
+		request.send();
+		//write(pin,value);
 	
 }
 
@@ -62,6 +63,7 @@ function mousePosition(){
 		//console.log(`${event.x},${event.y}\n`);
 		sendData("V2",event.x);
 		//sendData("V2",event.y);
+		//write(`${event.x},${event.y}\n`);
 		};
 
 	let throttle = (func, delay) => {
@@ -75,5 +77,5 @@ function mousePosition(){
 	  }
 	};
 
-	document.addEventListener('mousemove', throttle(handleMousemove, 500));
+	document.addEventListener('mousemove', throttle(handleMousemove, 2000));
 }
