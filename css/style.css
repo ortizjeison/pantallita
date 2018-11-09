@@ -26,9 +26,9 @@ tr {
 @media (max-width: 978px) {
 
 tr {
-    line-height: 6rem;
-    min-height: 6rem;
-    height: 6rem;
+    line-height: 5rem;
+    min-height: 5rem;
+    height: 5rem;
  }
 }
 
